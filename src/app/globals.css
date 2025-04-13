@@ -8,9 +8,10 @@
 body {
   background: var(--background);
   background-image: url("/images/bird.svg");
-  background-position: 120%;
+  background-position: 120% center;
   background-repeat: no-repeat;
   background-size: 133%;
   color: var(--foreground);
   font-family: var(--font-inter-sans), Arial, Helvetica, sans-serif;
+  min-height: 100dvh;
 }
