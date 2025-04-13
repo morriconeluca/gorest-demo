@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It is a simple demo web app to show how to use [Gorest API](https://gorest.co.in/).
 
 ## Getting Started
 
-First, run the development server:
+First, add your .env file:
+
+```bash
+cp env.example.txt .env
+```
+
+Then replace the placeholders keys with your own values.
+
+Then, run the development server:
 
 ```bash
 npm run dev
