@@ -1,0 +1,49 @@
+@theme {
+  --*: initial;
+
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+
+  --color-black-light: #242424;
+  --color-black-medium: #272727;
+  --color-black-dark: #353535;
+  --color-error: #f98fcc;
+  --color-link: #4be0e2;
+  --color-primary: #2fb1c3;
+  --color-primary-dark: #1f90b2;
+  --color-secondary: #ac25c1;
+  --color-secondary-dark: #8829b3;
+  --color-tertiary: #575757;
+  --color-tertiary-dark: #353535;
+  --color-white: #fff;
+
+  --font-body: Inter, sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --leading-100: 1;
+  --leading-125: 1.25;
+  --leading-150: 1.5;
+
+  --radius-5: 0.3125rem;
+  --radius-10: 0.625rem;
+  --radius-full: 100%;
+
+  --shadow-base: 4px 4px 4px 0 rgb(0 0 0 / 0.05);
+  --shadow-base-only-right: 4px -4px 4px 0 rgb(0 0 0 / 0.05);
+
+  --spacing: 0.25rem;
+
+  --text-14: 0.875rem;
+  --text-16: 1rem;
+  --text-20: 1.25rem;
+  --text-24: 1.5rem;
+  --text-32: 2rem;
+  --text-48: 3rem;
+}

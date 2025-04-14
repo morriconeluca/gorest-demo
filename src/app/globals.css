@@ -1,17 +1,13 @@
 @import 'tailwindcss';
-
-:root {
-  --background: #272727;
-  --foreground: #fff;
-}
+@import '../lib/ui/theme/theme.css';
 
 body {
-  background: var(--background);
+  background: var(--color-black-medium);
   background-image: url('/images/bird.svg');
   background-position: 120% center;
   background-repeat: no-repeat;
   background-size: 133%;
-  color: var(--foreground);
-  font-family: var(--font-inter-sans), Arial, Helvetica, sans-serif;
+  color: var(--color-white);
+  font-family: var(--font-body);
   min-height: 100dvh;
 }
