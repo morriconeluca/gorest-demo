@@ -1,6 +1,7 @@
 import 'server-only';
 
 import { cache } from 'react';
+import { redirect } from 'next/navigation';
 import { getUser } from '../services/gorest/apis/users/[userId]/GET/getUser';
 import { verifySession } from './session';
 
@@ -13,7 +14,7 @@ export const getCurrentUser = cache(async () => {
   const session = await verifySession();
 
   if (!session) {
-    return null;
+    return redirect('/sign-in');
   }
 
   try {

@@ -15,6 +15,7 @@ export default async function Posts() {
 
   return (
     <>
+      <Link href="/account">Account</Link>
       <h1>Hello, {user.id}. Here your Posts</h1>
       {posts.length === 0 ? (
         <>
