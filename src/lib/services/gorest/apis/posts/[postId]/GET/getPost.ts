@@ -1,7 +1,18 @@
 import 'server-only';
 
-import { gorestApi } from '@/lib/services/gorest/gorest';
-import { Post } from '@/lib/services/gorest/gorest.models';
+import { GOREST_HEADERS, Post } from '@/lib/services/gorest/gorest.models';
 
-export const getPost = async (postId: number) =>
-  await gorestApi.get(`posts/${postId}`).json<Post>();
+export const getPost = async (postId: number) => {
+  const res = await fetch(
+    `${process.env.GOREST_API_PREFIX_URL}/posts/${postId}`,
+    {
+      headers: GOREST_HEADERS,
+    }
+  );
+
+  if (!res.ok) {
+    throw res;
+  }
+
+  return (await res.json()) as Post;
+};

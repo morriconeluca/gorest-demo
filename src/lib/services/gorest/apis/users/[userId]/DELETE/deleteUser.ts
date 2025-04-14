@@ -1,6 +1,19 @@
 import 'server-only';
 
-import { gorestApi } from '@/lib/services/gorest/gorest';
+import { GOREST_HEADERS } from '@/lib/services/gorest/gorest.models';
 
-export const deleteUser = async (userId: number) =>
-  await gorestApi.delete(`users/${userId}`);
+export const deleteUser = async (userId: number) => {
+  const res = await fetch(
+    `${process.env.GOREST_API_PREFIX_URL}/users/${userId}`,
+    {
+      method: 'DELETE',
+      headers: GOREST_HEADERS,
+    }
+  );
+
+  if (!res.ok) {
+    throw res;
+  }
+
+  return res;
+};

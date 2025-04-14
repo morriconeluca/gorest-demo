@@ -16,3 +16,9 @@ export type User = {
 };
 
 export type UserStatus = 'active' | 'inactive';
+
+export const GOREST_HEADERS = {
+  Accept: 'application/json',
+  Authorization: `Bearer ${process.env.GOREST_API_KEY}`,
+  'Content-Type': 'application/json',
+};
