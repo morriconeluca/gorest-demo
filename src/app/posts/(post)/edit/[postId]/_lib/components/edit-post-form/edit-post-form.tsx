@@ -39,7 +39,7 @@ export const EditPostForm = ({ post }: { post: Post }) => {
         )}
       </div>
 
-      <Link href={`/posts`}>Cancel</Link>
+      <Link href="/posts">Cancel</Link>
 
       <button type="submit" disabled={pending}>
         {pending ? 'Saving...' : 'Save'}

@@ -18,10 +18,7 @@ export default async function Posts() {
       <Link href="/account">Account</Link>
       <h1>Hello, {user.id}. Here your Posts</h1>
       {posts.length === 0 ? (
-        <>
-          <p>No posts</p>
-          <Link href="/posts/create">Create a post</Link>
-        </>
+        <p>No posts</p>
       ) : (
         posts.map((post) => (
           <article key={post.id}>
@@ -32,6 +29,7 @@ export default async function Posts() {
           </article>
         ))
       )}
+      <Link href="/posts/create">Create a post</Link>
     </>
   );
 }

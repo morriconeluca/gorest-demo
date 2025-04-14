@@ -1,6 +1,7 @@
 'use client';
 
 import { useActionState } from 'react';
+import Link from 'next/link';
 import { createPostFormAction } from './create-post-form.actions';
 
 export const CreatePostForm = () => {
@@ -24,6 +25,8 @@ export const CreatePostForm = () => {
           <p className="text-sm text-red-500">{state.errors.body}</p>
         )}
       </div>
+
+      <Link href="/posts">Cancel</Link>
 
       <button type="submit" disabled={pending}>
         {pending ? 'Saving...' : 'Save'}

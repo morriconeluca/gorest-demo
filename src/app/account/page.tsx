@@ -12,6 +12,7 @@ export default async function Account() {
 
   return (
     <>
+      <Link href="/posts">Back to posts</Link>
       <h1>Account</h1>
       <p>UserId: {user.id}</p>
       <p>Name: {user.name}</p>
