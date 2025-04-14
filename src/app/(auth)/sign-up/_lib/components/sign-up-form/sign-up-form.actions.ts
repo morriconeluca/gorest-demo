@@ -3,7 +3,7 @@
 import { createUser } from '@/lib/services/gorest/apis/users/[userId]/POST/createUser';
 import { SignUpFormState } from './sign-up-form-models';
 import { SignUpFormSchema } from './sign-up-form.schemas';
-import { createSession } from '@/lib/auth/session.utils';
+import { createSession } from '@/lib/auth/session';
 import { CreateUserError } from '@/lib/services/gorest/apis/users/[userId]/POST/createUser.models';
 import { User } from '@/lib/services/gorest/gorest.models';
 

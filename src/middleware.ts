@@ -1,8 +1,8 @@
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 import { ROUTES } from './middleware.models';
-import { decrypt } from './lib/auth/jwt.utils';
-import { updateSession } from './lib/auth/session.utils';
+import { decrypt } from './lib/auth/jwt';
+import { updateSession } from './lib/auth/session';
 
 export default async function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname;

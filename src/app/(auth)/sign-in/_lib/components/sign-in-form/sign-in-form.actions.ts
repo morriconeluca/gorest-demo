@@ -2,7 +2,7 @@
 
 import { SignInFormState } from './sign-in-form-models';
 import { SignInFormSchema } from './sign-in-form.schemas';
-import { createSession } from '@/lib/auth/session.utils';
+import { createSession } from '@/lib/auth/session';
 import { User } from '@/lib/services/gorest/gorest.models';
 import { getUser } from '@/lib/services/gorest/apis/users/[userId]/GET/getUser';
 

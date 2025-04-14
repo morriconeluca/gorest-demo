@@ -14,5 +14,5 @@ export const getPosts = async (userId: number) => {
     throw res;
   }
 
-  return (await res.json()) as Post;
+  return (await res.json()) as Post[];
 };

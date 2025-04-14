@@ -2,7 +2,7 @@ import 'server-only';
 
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { decrypt, encrypt } from './jwt.utils';
+import { decrypt, encrypt } from './jwt';
 
 export async function createSession(userId: number) {
   const expiresAt = new Date(Date.now() + 60 * 60 * 1000);
