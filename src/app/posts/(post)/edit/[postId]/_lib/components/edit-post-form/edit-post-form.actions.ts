@@ -1,22 +1,23 @@
 'use server';
 
-import { CreatePostFormState } from './create-post-form-models';
-import { CreatePostFormSchema } from './create-post-form.schemas';
+import { EditPostFormState } from './edit-post-form-models';
+import { EditPostFormSchema } from './edit-post-form.schemas';
 import { deleteSession } from '@/lib/auth/session';
-import { createPost } from '@/lib/services/gorest/apis/users/[userId]/posts/POST/createPost';
 import { getCurrentUser } from '@/lib/auth/dal';
 import { redirect } from 'next/navigation';
+import { editPost } from '@/lib/services/gorest/apis/posts/[postId]/PATCH/editPost';
 
-export const createPostFormAction = async (
-  _currentState: CreatePostFormState,
+export const editPostFormAction = async (
+  postId: number,
+  _currentState: EditPostFormState,
   formData: FormData
-): Promise<CreatePostFormState> => {
+): Promise<EditPostFormState> => {
   /**
    * The safeParse() method returns the validatedFields variable,
    * which will contain either the successfully parsed data
    * or an error object if validation fails.
    */
-  const validatedFields = CreatePostFormSchema.safeParse({
+  const validatedFields = EditPostFormSchema.safeParse({
     body: formData.get('body'),
     title: formData.get('title'),
   });
@@ -41,7 +42,7 @@ export const createPostFormAction = async (
       return await deleteSession();
     }
 
-    await createPost({ body, title, userId: user.id });
+    await editPost({ body, title, postId });
   } catch (_error) {
     return {
       message: 'Something went wrong. Please try again.',
