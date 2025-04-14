@@ -2,6 +2,7 @@ import { getCurrentUser } from '@/lib/auth/dal';
 import { deleteSession } from '@/lib/auth/session';
 import { getPosts } from '@/lib/services/gorest/apis/users/[userId]/posts/GET/getPosts';
 import Link from 'next/link';
+import { DeletePostButton } from './_lib/components/delete-post-button/delete-post-button';
 
 export default async function Posts() {
   const user = await getCurrentUser();
@@ -25,6 +26,7 @@ export default async function Posts() {
           <article key={post.id}>
             <h2>{post.title}</h2>
             <p>{post.body}</p>
+            <DeletePostButton postId={post.id} />
             <Link href={`/posts/edit/${post.id}`}>EDIT</Link>
           </article>
         ))

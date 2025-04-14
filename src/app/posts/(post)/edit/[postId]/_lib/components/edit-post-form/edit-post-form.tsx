@@ -3,6 +3,7 @@
 import { useActionState } from 'react';
 import { editPostFormAction } from './edit-post-form.actions';
 import { Post } from '@/lib/services/gorest/gorest.models';
+import Link from 'next/link';
 
 export const EditPostForm = ({ post }: { post: Post }) => {
   const editPostFormActionWithPostId = editPostFormAction.bind(null, post.id);
@@ -37,6 +38,8 @@ export const EditPostForm = ({ post }: { post: Post }) => {
           <p className="text-sm text-red-500">{state.errors.body}</p>
         )}
       </div>
+
+      <Link href={`/posts`}>Cancel</Link>
 
       <button type="submit" disabled={pending}>
         {pending ? 'Saving...' : 'Save'}
