@@ -1,5 +1,7 @@
 This is a simple demo web app to show how to use [Gorest API](https://gorest.co.in/). It is build with [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+You can visit the [demo](https://gorest-demo.vercel.app/) to see how it works.
+
 ## Getting Started
 
 First, add your .env file:
