@@ -6,6 +6,8 @@ import { Card } from '@/lib/ui/components/atoms/card/card';
 export default function SignIn() {
   return (
     <Card label="Sign In">
+      <h1 className={`${t.heading.medium} mb-6`}>Sign in to your account</h1>
+      <p className="mb-8">Start writing and save your posts</p>
       <SignInForm />
       <p className="sm:text-right">
         Don&apos;t have an account yet?{' '}

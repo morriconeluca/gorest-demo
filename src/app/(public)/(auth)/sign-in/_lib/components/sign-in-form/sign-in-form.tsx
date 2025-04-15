@@ -2,6 +2,7 @@
 
 import { useActionState } from 'react';
 import { signInFormAction } from './sign-in-form.actions';
+import button from '@/lib/ui/theme/recipes/button.styles';
 
 export const SignInForm = () => {
   const [state, action, pending] = useActionState(signInFormAction, undefined);
@@ -15,9 +16,15 @@ export const SignInForm = () => {
         )}
       </div>
 
-      <button type="submit" disabled={pending}>
-        {pending ? 'Signing In...' : 'Sign In'}
-      </button>
+      <p className="sm:flex sm:justify-end mb-8">
+        <button
+          className={`${button.primary} sm:max-w-[calc((100%-1rem)/2)]`}
+          disabled={pending}
+          type="submit"
+        >
+          {pending ? 'Signing In...' : 'Sign In'}
+        </button>
+      </p>
       {state?.message && (
         <p className="text-sm text-red-500">{state.message}</p>
       )}
