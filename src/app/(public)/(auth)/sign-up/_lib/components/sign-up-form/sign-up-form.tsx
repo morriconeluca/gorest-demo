@@ -1,9 +1,11 @@
 'use client';
 
 import { useActionState } from 'react';
-import { signUpFormAction } from './sign-up-form.actions';
+import Image from 'next/image';
 import { Input } from '@/lib/ui/components/input/input';
 import button from '@/lib/ui/theme/recipes/button.styles';
+import { signUpFormAction } from './sign-up-form.actions';
+import t from '@/lib/ui/theme/recipes/typography.styles';
 
 export const SignUpForm = () => {
   const [state, action, pending] = useActionState(signUpFormAction, undefined);
@@ -28,15 +30,38 @@ export const SignUpForm = () => {
         type="email"
       />
 
-      <div>
-        <select id="gender" name="gender">
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-        </select>
-        {state?.errors?.gender && (
-          <p className="text-sm text-red-500">{state.errors.gender}</p>
-        )}
-      </div>
+      <p>
+        <label className="mb-1">
+          <span className={`${t.label} mb-1`}>Gender</span>
+          <select
+            aria-describedby="gender-error"
+            aria-invalid={!!state?.errors?.gender}
+            id="gender"
+            name="gender"
+          >
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </label>
+        <span
+          aria-live="polite"
+          className={`${t.error} flex items-center gap-1`}
+          id="gender-error"
+        >
+          {state?.errors?.gender && (
+            <>
+              <Image
+                alt="error"
+                aria-hidden="true"
+                height={16}
+                src="/interface/circle-exclamation.svg"
+                width={16}
+              />
+              {state.errors.gender}
+            </>
+          )}
+        </span>
+      </p>
 
       <p className="sm:flex sm:justify-end mb-8">
         <button
