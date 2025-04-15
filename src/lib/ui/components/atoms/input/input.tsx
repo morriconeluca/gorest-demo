@@ -1,3 +1,5 @@
+'use client';
+
 import { useId } from 'react';
 import Image from 'next/image';
 import t from '@/lib/ui/theme/recipes/typography.styles';
