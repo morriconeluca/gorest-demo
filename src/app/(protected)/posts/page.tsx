@@ -20,7 +20,7 @@ export default async function Posts() {
 
   return (
     <>
-      <Card className="max-sm:[&+article]:border-t-1 border-black-dark sm:[&+article]:mt-12">
+      <Card className="max-sm:[&+article]:border-t-1 border-tertiary sm:[&+article]:mt-12">
         <h1 className={t.heading.big}>
           {posts.length === 0 ? 'Your Posts' : 'No posts yet'}
         </h1>
@@ -29,7 +29,7 @@ export default async function Posts() {
       {posts.length > 0 &&
         posts.map((post) => (
           <Card
-            className="max-sm:[&+article]:border-t-1 border-black-dark sm:[&+article]:mt-12"
+            className="max-sm:[&+article]:border-t-1 border-tertiary sm:[&+article]:mt-12"
             key={post.id}
           >
             <h2 className={`${t.heading.medium} mb-6`}>{post.title}</h2>
