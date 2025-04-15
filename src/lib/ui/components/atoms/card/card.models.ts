@@ -1,5 +1,5 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ComponentPropsWithRef } from 'react';
 
 export type TCard = {
   label?: string;
-} & DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
+} & ComponentPropsWithRef<'article'>;

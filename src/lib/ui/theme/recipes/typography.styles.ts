@@ -1,4 +1,5 @@
 const typography = {
+  error: 'text-14 text-error',
   heading: {
     big: 'text-32 font-light sm:text-48',
     medium: 'text-24 font-light sm:text-32',
