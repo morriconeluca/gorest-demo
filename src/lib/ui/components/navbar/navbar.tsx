@@ -17,7 +17,7 @@ export const Navbar = ({ userId }: TNavbar) => {
       </Link>
       {userId && (
         <p
-          className={`${t.label} absolute w-full flex items-center justify-center z-[-1]`}
+          className={`${t.label} absolute left-0 w-full flex justify-center z-[-1]`}
         >
           Hello, {userId}
         </p>

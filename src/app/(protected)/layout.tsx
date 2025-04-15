@@ -14,7 +14,7 @@ export default async function ProtectedLayout({
   }
 
   return (
-    <body className="pt-36">
+    <body className="flex justify-center sm:p-12 sm:pt-36">
       <Navbar userId={user.id} />
       {children}
     </body>

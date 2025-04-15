@@ -1,9 +1,11 @@
 'use client';
 
 import { useActionState } from 'react';
+import button from '@/lib/ui/theme/recipes/button.styles';
 import { deletePostButtonAction } from './delete-post-button.actions';
+import { TDeletePostButton } from './delete-post-button.models';
 
-export const DeletePostButton = ({ postId }: { postId: number }) => {
+export const DeletePostButton = ({ postId, ...rest }: TDeletePostButton) => {
   const deletePostButtonActionWithPostId = deletePostButtonAction.bind(
     null,
     postId
@@ -14,12 +16,14 @@ export const DeletePostButton = ({ postId }: { postId: number }) => {
   );
 
   return (
-    <form action={action}>
-      <button type="submit" disabled={pending}>
+    <form {...rest} action={action}>
+      <button className={button.secondary} type="submit" disabled={pending}>
         {pending ? 'Deleting...' : 'Delete'}
       </button>
       {state?.message && (
-        <p className="text-sm text-red-500">{state.message}</p>
+        <p className="text-error" role="alert">
+          {state.message}
+        </p>
       )}
     </form>
   );
