@@ -22,7 +22,7 @@ export default async function Posts() {
     <>
       <Card className="max-sm:[&+article]:border-t-1 border-tertiary sm:[&+article]:mt-12">
         <h1 className={t.heading.big}>
-          {posts.length === 0 ? 'Your Posts' : 'No posts yet'}
+          {posts?.length > 0 ? 'Your Posts' : 'No posts yet'}
         </h1>
       </Card>
 
