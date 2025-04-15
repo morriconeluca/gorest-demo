@@ -3,7 +3,7 @@
 import { useActionState } from 'react';
 import { signInFormAction } from './sign-in-form.actions';
 import button from '@/lib/ui/theme/recipes/button.styles';
-import { Input } from '@/lib/ui/components/atoms/input/input';
+import { Input } from '@/lib/ui/components/input/input';
 
 export const SignInForm = () => {
   const [state, action, pending] = useActionState(signInFormAction, undefined);

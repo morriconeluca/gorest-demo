@@ -1,7 +1,22 @@
-export default function ProtectedLayout({
+import { getCurrentUser } from '@/lib/auth/dal';
+import { deleteSession } from '@/lib/auth/session';
+import { Navbar } from '@/lib/ui/components/navbar/navbar';
+
+export default async function ProtectedLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <body>{children}</body>;
+  const user = await getCurrentUser();
+
+  if (!user) {
+    return await deleteSession();
+  }
+
+  return (
+    <body className="pt-36">
+      <Navbar userId={user.id} />
+      {children}
+    </body>
+  );
 }

@@ -2,7 +2,7 @@
 
 import { useActionState } from 'react';
 import { signUpFormAction } from './sign-up-form.actions';
-import { Input } from '@/lib/ui/components/atoms/input/input';
+import { Input } from '@/lib/ui/components/input/input';
 import button from '@/lib/ui/theme/recipes/button.styles';
 
 export const SignUpForm = () => {

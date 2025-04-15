@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Card } from '@/lib/ui/components/atoms/card/card';
+import { Card } from '@/lib/ui/components/card/card';
 import t from '@/lib/ui/theme/recipes/typography.styles';
 import { SignUpForm } from './_lib/components/sign-up-form/sign-up-form';
 

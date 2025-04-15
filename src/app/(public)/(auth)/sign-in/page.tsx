@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { SignInForm } from './_lib/components/sign-in-form/sign-in-form';
 import t from '@/lib/ui/theme/recipes/typography.styles';
-import { Card } from '@/lib/ui/components/atoms/card/card';
+import { Card } from '@/lib/ui/components/card/card';
 
 export default function SignIn() {
   return (
