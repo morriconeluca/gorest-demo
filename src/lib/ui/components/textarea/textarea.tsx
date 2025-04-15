@@ -3,21 +3,27 @@
 import { useId } from 'react';
 import Image from 'next/image';
 import t from '@/lib/ui/theme/recipes/typography.styles';
-import { TInput } from './input.models';
-import * as S from './input.styles';
+import { TTextarea } from './textarea.models';
+import * as S from './textarea.styles';
 
-export const Input = ({ className, error, label, style, ...rest }: TInput) => {
+export const Textarea = ({
+  className,
+  error,
+  label,
+  style,
+  ...rest
+}: TTextarea) => {
   const errorId = useId();
 
   return (
-    <p className={`${className || ''} h-[110px]`} style={style}>
+    <p className={`${className || ''}  h-[184px]`} style={style}>
       <label className="mb-1">
         <span className={`${t.label} mb-1`}>{label}</span>
-        <input
+        <textarea
           aria-describedby={errorId}
           aria-invalid={!!error}
           {...rest}
-          className={S.input}
+          className={S.textarea}
         />
       </label>
       <span

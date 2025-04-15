@@ -50,6 +50,7 @@ export default async function Posts() {
         ))}
 
       <Link
+        aria-label="Create a new post"
         className={`${circle.primary} fixed bottom-4 right-4 sm:bottom-12 sm:right-12`}
         href="/posts/create"
       >

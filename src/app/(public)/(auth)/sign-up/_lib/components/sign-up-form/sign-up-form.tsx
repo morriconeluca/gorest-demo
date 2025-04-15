@@ -20,7 +20,6 @@ export const SignUpForm = () => {
         type="text"
       />
       <Input
-        autoFocus
         error={state?.errors?.email?.[0]}
         id="email"
         label="Email"

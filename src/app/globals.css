@@ -12,3 +12,17 @@ body {
   font-family: var(--font-body);
   min-height: 100dvh;
 }
+
+::-webkit-scrollbar {
+  border-radius: 1;
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-black-medium);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-dark);
+  border-radius: 1;
+}
