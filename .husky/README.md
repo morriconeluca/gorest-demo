@@ -1,4 +1,4 @@
-**What are Conventional Commits?**
+# What are Conventional Commits?
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) is a specification, essentially a set of simple rules, for how to format your commit messages. It's built upon the ideas of semantic versioning (SemVer).
 
@@ -9,7 +9,7 @@ The main goal is to create a **standardized, human-readable, and machine-readabl
 3.  **Improve Collaboration:** Provides a clear and consistent way for developers (and stakeholders) to understand the nature of changes in the codebase just by looking at the commit history.
 4.  **Trigger Build/Deploy Processes:** CI/CD pipelines can potentially use commit types to make decisions.
 
-**The Structure of a Conventional Commit Message**
+## The Structure of a Conventional Commit Message
 
 The basic structure looks like this:
 
@@ -29,7 +29,7 @@ The basic structure looks like this:
   - `BREAKING CHANGE:` followed by a description of the breaking change. This signals a MAJOR version bump in SemVer. It can be part of any commit type.
   - Referencing issues (e.g., `Fixes #123`, `Closes #N`).
 
-**Meaning of the Prefixes (Types)**
+## Meaning of the Prefixes (Types)
 
 Here's what the common prefixes typically mean:
 
