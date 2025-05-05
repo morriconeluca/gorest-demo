@@ -1,11 +1,10 @@
+# See the README file for details on conventional commits
 MSG_FILE=$1
 
 MSG=$(cat "$MSG_FILE")
 
-# https://www.conventionalcommits.org/en/v1.0.0/
-
-if ! echo "$MSG" | grep -qE "^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert)(\(.+?\))?: .{1,}$"; then
-  echo "Aborting commit. Your commit message is invalid." >&2
+if ! echo "$MSG" | grep -qE "^(build|chore|ci|docs|feat|fix|init|perf|refactor|revert|style|test)(\(.+?\))?: .{1,}$"; then
+  echo "Aborting commit. Your commit message is invalid. See .husky/README.md for more details." >&2
   exit 1
 fi
 
